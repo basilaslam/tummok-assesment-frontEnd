@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base:'/tummok-assesment-frontEnd/',
   plugins: [react()],
+  base:'/'
 })
