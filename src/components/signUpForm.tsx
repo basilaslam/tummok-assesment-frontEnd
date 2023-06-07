@@ -49,7 +49,7 @@ function signUpForm({styles}:{styles: formStyle}) {
 			console.log(values);
 			
 		try{
-		await axios.post('/register',values)
+		await axios.post('api/register',values)
 	
 			navigate('/login')
 		}catch(err){

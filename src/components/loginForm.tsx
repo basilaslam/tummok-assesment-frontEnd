@@ -36,7 +36,7 @@ useEffect(()=>{
 
 	const handleSubmit = async (values:initialValues) =>{
 	try{
-		const loginResponse = await axios.post('/login',values)
+		const loginResponse = await axios.post('api/login',values)
 		const token = loginResponse.data.token
 
 		dispach(logIn({token}))
