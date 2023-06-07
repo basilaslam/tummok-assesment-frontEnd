@@ -1,14 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { ErrorMessage, Field, Form, Formik } from 'formik'
+import { Field, Form, Formik } from 'formik'
 import loginValidation from '../validation/loginFormValidation'
 import { formStyle } from '../types/form'
 import axios from '../api/axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useReducer, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { RootState } from '../store/store';
 import { logIn } from '../slices/auth.slice'
-import Test from './Test'
 const initialValues ={
 	email: "",
 	password:""
@@ -51,7 +50,7 @@ useEffect(()=>{
 
 	const googleLogin = () =>{
 		const googleLoginURI = 'https://vast-red-ox-slip.cyclic.app/api/auth/google'
-		const newWindow = window.open(
+		window.open(
 		googleLoginURI,
 		"_blank",
 		"width=500, height=600"

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { formStyle } from '../types/form'
 import signUpFormValidation from '../validation/signUpFormValidation'
 import axios from '../api/axios'
@@ -37,7 +37,7 @@ function signUpForm({styles}:{styles: formStyle}) {
 
 	const googleLogin = () =>{
 		const googleLoginURI = 'https://vast-red-ox-slip.cyclic.app/api/auth/google'
-		const newWindow = window.open(
+		window.open(
 		googleLoginURI,
 		"_blank",
 		"width=500, height=600"
@@ -49,7 +49,7 @@ function signUpForm({styles}:{styles: formStyle}) {
 			console.log(values);
 			
 		try{
-			const loginResponse = await axios.post('/register',values)
+		await axios.post('/register',values)
 	
 			navigate('/login')
 		}catch(err){

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { logIn } from '../slices/auth.slice';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../store/store';
+import { useDispatch } from 'react-redux';
 
 function Redirect() {
   const location = useLocation();

@@ -1,14 +1,12 @@
 import React from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../store/store"
-import { logIn, logOut } from "../slices/auth.slice"
+import { useDispatch } from "react-redux"
+import { logOut } from "../slices/auth.slice"
 
 const NavBar = () => {
     const [open, setOpen] = React.useState(false)
     const [flyer, setFlyer] = React.useState(false)
     const [flyerTwo, setFlyerTwo] = React.useState(false)
 	const dispach = useDispatch()
-	const  { userInfo } = useSelector(( state:RootState ) => state.auth)
 
 
 	const handleLogOut = () =>{

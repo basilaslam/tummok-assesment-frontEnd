@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { logIn, logOut } from "../slices/auth.slice"
+import {  logOut } from "../slices/auth.slice"
 
 function Test(){
 	const dispach = useDispatch()
